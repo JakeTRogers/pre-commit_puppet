@@ -1,0 +1,33 @@
+- id: pdk-validate
+  name: check puppet code syntax & style
+  fail_fast: true
+  language: script
+  entry: run-pdk.sh validate
+  files: \.(erb|epp|pp|rb|ya?ml)$
+  stages:
+    - pre-commit
+- id: pdk-test-unit
+  name: run puppet rspec unit tests
+  pass_filenames: false
+  language: script
+  entry: run-pdk.sh test unit
+  fail_fast: true
+  stages:
+    - pre-commit
+  files: \.(erb|epp|pp|rb|ya?ml)$
+- id: pdk-puppet-strings-control-repo
+  name: check control-repo documentation is current
+  always_run: true
+  pass_filenames: false
+  language: script
+  entry: run-pdk.sh bundle exec puppet strings generate 'site*/**/*.pp' 'site*/**/*.rb'
+  stages:
+    - pre-push
+- id: pdk-puppet-strings-module
+  name: check module documentation is current
+  always_run: true
+  pass_filenames: false
+  language: script
+  entry: run-pdk.sh bundle exec puppet strings generate 'manifests/**/*.pp' 'manifests/**/*.rb'
+  stages:
+    - pre-push
