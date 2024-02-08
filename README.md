@@ -14,7 +14,8 @@ This repository contains a set of [pre-commit](https://pre-commit.com/) hooks fo
 2. Add the desired hooks to your `.pre-commit-config.yaml` in the root of the repository
 3. run `pre-commit install --install-hooks`
 
-> **&#9432;** To automate the install of pre-commit hooks when creating or cloning a repository, use git's `init.templateDir` setting. The Pre-commit project's documentation for this process can be found [here](https://pre-commit.com/index.html#pre-commit-init-templatedir).
+> [!TIP]
+> To automate the install of pre-commit hooks when creating or cloning a repository, use git's `init.templateDir` setting. The Pre-commit project's documentation for this process can be found [here](https://pre-commit.com/index.html#pre-commit-init-templatedir).
 
 ### Example
 
@@ -32,7 +33,8 @@ To add the `pdk-validate`, `pdk-test-unit`, `pdk-puppet-strings-control-repo` ho
     args: [--format=markdown, --out=REFERENCE.md]
 ```
 
-> **&#9432;** Review the [pdk documentation](https://puppet.com/docs/pdk/latest/pdk.html) for more information on the available options for validate and test unit. While the puppet strings documentation can be found [here](https://www.puppet.com/docs/puppet/8/puppet_strings.html).
+> [!NOTE]
+> Review the [pdk documentation](https://puppet.com/docs/pdk/latest/pdk.html) for more information on the available options for validate and test unit. While the puppet strings documentation can be found [here](https://www.puppet.com/docs/puppet/8/puppet_strings.html).
 
 ## Hooks
 
