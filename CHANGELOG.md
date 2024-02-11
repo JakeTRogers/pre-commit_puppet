@@ -1,3 +1,9 @@
+## v1.1.0 (2024-02-11)
+
+### Feat
+
+- change pdk test unit from pre-commit to always run pre-push instead
+
 ## v1.0.0 (2024-02-06)
 
 ### Feat
