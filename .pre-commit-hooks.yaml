@@ -3,7 +3,7 @@
   fail_fast: true
   language: script
   entry: run-pdk.sh validate
-  files: \.(erb|epp|pp|rb|ya?ml)$
+  files: \.(erb|epp|pp|rb)$
   stages:
     - pre-commit
 - id: pdk-test-unit
