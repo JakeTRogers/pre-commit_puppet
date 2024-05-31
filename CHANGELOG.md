@@ -1,3 +1,9 @@
+## v1.1.1 (2024-05-30)
+
+### Fix
+
+- remove yaml from pdk-validate files filter to avoid pdk 3.2.0 bug
+
 ## v1.1.0 (2024-02-11)
 
 ### Feat
